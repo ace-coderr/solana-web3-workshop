@@ -38,7 +38,7 @@ export default function Home() {
 
     const balance = await connection.getBalance(publicKey).then((info) => {
       console.log(info); if (info) {
-        setSolBalance(info / LAMPORTS_PER_SOL);
+        getSolBalance(info / LAMPORTS_PER_SOL);
       }
     });
     return balance;
