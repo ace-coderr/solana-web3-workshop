@@ -5,7 +5,6 @@ import React from "react";
 import { PublicKey } from "@solana/web3.js";
 import CreateMint from "./CreateMint";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
-import MintTokens from "./MintTokens";
 
 
 type DashboardProps = {
@@ -25,19 +24,6 @@ export default function Dashboard({ mintAddr, setMintAddr }: DashboardProps) {
             </div>
 
             <CreateMint onMintCreated={setMintAddr} />
-
-            {/* <div className="mt-8"> */}
-                {/* <CreateTokenAccount mintAddr={mintAddr} onAccountCreated={setTokenAccountAddr} /> */}
-            {/* </div> */}
-
-            <div className="mt-8">
-                {mintAddr && tokenAccountAddr && (
-                    <MintTokens
-                        mintAddr={mintAddr.toBase58()}
-                        accAddr={tokenAccountAddr.toBase58()}
-                    />
-                )}
-            </div>
         </main>
     );
 }

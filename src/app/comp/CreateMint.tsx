@@ -109,10 +109,10 @@ export default function CreateMint({ onMintCreated }: CreateMintProps) {
     ];
 
     return (
-        <form onSubmit={createMint} className="bg-[#2a302f] p-6 rounded-lg border border-red-500">
+        <form onSubmit={createMint} className="bg-[#2a302f] p-6 rounded-lg border border-green-500">
             <div className="flex justify-between items-center mb-4">
                 <h2 className="font-bold text-2xl text-[#fa6ece]">Create Token Mint</h2>
-                <button className={`px-4 py-1 rounded bg-pink-500 text-white cursor-pointer`}
+                <button className={`px-4 py-1 rounded bg-green-500 text-white cursor-pointer`}
                 >
                     Submit
                 </button>
